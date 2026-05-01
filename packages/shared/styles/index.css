@@ -1,0 +1,487 @@
+/* ---------- RESET & BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #b22222;
+    --black: #1e1e1e;
+    --white: #f5f5f5;
+    --gray-light: #e5e5e5;
+    --gray-medium: #b2b2b2;
+    --gray: #7f7f7f;
+    --gray-dark: #4a4a4a;
+}
+
+body {
+    background-color: var(--white);
+    font-family:
+        "Inter",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+    max-width: 70ch;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    color: var(--black);
+    line-height: 1.7;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* ---------- HEADINGS ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 2.5rem 0 1rem 0;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    letter-spacing: -0.03em;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-top: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: -0.01em;
+}
+
+/* ---------- LINKS ---------- */
+a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid var(--gray-light);
+    transition: border-color 0.1s ease;
+}
+
+a:hover {
+    border-bottom-color: var(--red);
+    color: var(--black);
+}
+
+a[href^="http://"]::after,
+a[href^="https://"]::after {
+    content: "↗";
+    padding-left: 0.2em;
+    color: var(--gray);
+}
+
+/* ---------- HEADER & FOOTER ---------- */
+header {
+    padding-bottom: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    color: var(--gray);
+}
+
+footer {
+    padding-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-top: 4px solid var(--black);
+}
+
+header a,
+footer a {
+    color: inherit;
+    border: none;
+    transition: color 0.1s ease;
+}
+
+header a:hover,
+footer a:hover {
+    color: var(--red);
+}
+
+header .breadcrumbs {
+    color: var(--gray-medium);
+}
+
+/* ---------- ARTICLE CONTENT ---------- */
+
+article p,
+article div {
+    margin: 1.5rem 0;
+}
+
+/* ---------- FOOTNOTES ---------- */
+
+.footnote-ref {
+    font-size: 0.75rem;
+    vertical-align: super;
+    line-height: 0;
+    margin-left: 0.1rem;
+    color: var(--gray);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: none;
+    transition: color 0.1s ease;
+}
+
+.footnote-ref:hover {
+    color: var(--red);
+    border-bottom: none;
+}
+
+.footnotes hr {
+    margin: 0;
+    border: none;
+    border-top: 2px solid var(--gray-light);
+    width: 4rem;
+}
+
+.footnotes {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.footnotes ol {
+    margin: 0;
+    padding-left: 1.2rem;
+    list-style-type: decimal;
+}
+
+.footnotes li {
+    margin: 0.75rem 0;
+    padding-left: 0.5rem;
+    line-height: 1.5;
+}
+
+.footnotes li p {
+    margin: 0;
+    display: inline;
+}
+
+.footnote-back {
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+    text-decoration: none;
+    border-bottom: none;
+    color: var(--gray);
+    transition: color 0.1s ease;
+}
+
+.footnote-back:hover {
+    color: var(--red);
+    border-bottom: none;
+    background-color: transparent;
+}
+
+.footnotes li::marker {
+    color: var(--gray);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.footnotes a {
+    color: var(--gray);
+}
+
+.footnotes a:hover {
+    border-bottom: 2px solid var(--gray);
+}
+
+/* ---------- NAVIGATION ---------- */
+nav {
+    padding: 1.5rem 0;
+}
+
+nav.nav-top {
+    border-top: 2px solid var(--black);
+    border-bottom: 4px solid var(--black);
+}
+
+nav.nav-bottom {
+    border-bottom: 2px solid var(--black);
+}
+
+nav p {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    color: var(--gray);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    padding: 0.25rem 0;
+    border: none;
+    background-color: #00000000;
+    color: var(--black);
+    transition: background-color 0.1s ease;
+    transition: color 0.1s ease;
+}
+
+nav a.active {
+    background-color: var(--gray-light);
+}
+
+nav a:hover {
+    color: var(--white);
+    background-color: var(--red);
+}
+
+nav .login-out {
+    margin-left: auto;
+}
+
+/* ---------- HORIZONTAL RULE ---------- */
+hr {
+    border: none;
+    border-top: 1px solid var(--gray-light);
+    margin: 2.5rem 0;
+}
+
+/* ---------- BUTTONS ---------- */
+.button,
+form input[type="submit"] {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: 0.4rem 1.2rem;
+    background-color: var(--black);
+    color: var(--white);
+    display: inline-block;
+    letter-spacing: 0.03em;
+    border-bottom: none;
+    border: none;
+    transition: background-color 0.1s ease;
+}
+
+.button:hover,
+form input[type="submit"]:hover {
+    background-color: var(--red);
+    color: var(--white);
+    border-bottom: none;
+    cursor: pointer;
+}
+
+/* ---------- IMAGES ---------- */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0;
+    filter: grayscale(100%);
+    border: 1px solid var(--gray-light);
+    transition: filter 0.1s ease;
+}
+
+img:hover {
+    filter: grayscale(0%);
+}
+
+p > img {
+    margin: 0;
+}
+
+/* ---------- QUOTES ---------- */
+blockquote {
+    margin: 1.5rem 0;
+    padding: 0rem 2rem;
+    background-color: var(--white);
+    border-left: 4px solid var(--gray);
+    font-style: italic;
+    color: var(--gray-dark);
+}
+
+/* ---------- LISTS ---------- */
+ul,
+ol {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+/* ---------- INFO BADGES ---------- */
+.info {
+    background-color: var(--gray-light);
+    color: var(--gray-dark);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    font-style: normal;
+    letter-spacing: 0.02em;
+    word-break: keep-all;
+}
+
+li .info {
+    margin-left: 0.4em;
+}
+
+/* ---------- COMMENTS ---------- */
+details.comments {
+    margin: 1.5rem 0;
+    border: 2px solid var(--gray-light);
+    font-size: 0.95rem;
+}
+
+details.comments summary {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--gray-dark);
+    cursor: pointer;
+    padding: 0.8rem 1.2rem;
+    transition: background-color 0.1s ease;
+}
+
+details.comments summary:hover {
+    background-color: var(--gray-light);
+}
+
+details.comments[open] summary {
+    border-bottom: 2px solid var(--gray-light);
+    background-color: var(--gray-light);
+}
+
+details.comments ul,
+details.comments ol,
+details.comments p {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+details.comments li .info {
+    margin-left: 0;
+    margin-right: 0.4em;
+}
+
+details.comments .button {
+    color: var(--white);
+    margin-top: 0.4rem;
+}
+
+.comments-inner {
+    padding: 1rem 1.5rem;
+}
+
+.controls {
+    width: 100%;
+    background-color: var(--black);
+    margin: 0;
+    border-bottom: 4px solid var(--black);
+    border-left: 4px solid var(--black);
+    border-right: 4px solid var(--black);
+}
+
+/* ---------- FORMS ---------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray-light);
+    padding: 0.2rem 0.9rem 0.6rem;
+    gap: 0.2rem;
+}
+
+form label {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: var(--gray-dark);
+}
+
+form input[type="text"],
+form input[type="password"] {
+    padding: 0.2em;
+    width: 100%;
+}
+
+form textarea {
+    height: 5em;
+    padding: 0.4em;
+    width: 100%;
+}
+
+form input[type="submit"] {
+    margin-left: auto;
+    margin-top: 0.3rem;
+    display: block;
+}
+
+/* ---------- RESPONSIVE ADJUSTMENTS ---------- */
+/* @media (max-width: 600px) {
+    body {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .button,
+    a + em {
+        display: block;
+        text-align: center;
+    }
+}
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
