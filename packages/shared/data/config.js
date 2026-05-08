@@ -12,6 +12,5 @@ export const siteData = {
     adminPages: [
         { title: "home", link: "/" },
         { title: "posts", link: "/posts" },
-        { title: "comments", link: "/comments" },
     ],
 };
