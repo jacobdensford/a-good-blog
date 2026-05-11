@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { AuthContext } from "../context";
+import { AuthContext } from "@blog/shared";
 
 export function CommentBox({ postId, fetchComments }) {
     const {
