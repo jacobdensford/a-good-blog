@@ -53,7 +53,7 @@ export function CommentBox({ postId, fetchComments }) {
     }
 
     return (
-        <div>
+        <div className="comment-box">
             {formError && <p className="error">{formError}</p>}
             <form
                 onSubmit={(e) => {

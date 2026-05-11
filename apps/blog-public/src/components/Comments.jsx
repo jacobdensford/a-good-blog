@@ -14,11 +14,13 @@ export default function Comments({ comments, postId, fetchComments }) {
             <summary>Comments</summary>
             <div className="comments-inner">
                 <ul>
-                    {comments.map((comment) => (
-                        <li key={comment.id} className="comment">
-                            <Comment comment={comment} />
-                        </li>
-                    ))}
+                    {comments.length > 0
+                        ? comments.map((comment) => (
+                              <li key={comment.id} className="comment">
+                                  <Comment comment={comment} />
+                              </li>
+                          ))
+                        : "No comments yet."}
                 </ul>
                 {!loading && authData?.username ? (
                     <CommentBox postId={postId} fetchComments={fetchComments} />

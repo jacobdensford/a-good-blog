@@ -415,6 +415,21 @@ details.comments .button {
     border-right: 4px solid var(--black);
 }
 
+.comment-box {
+    margin-top: 1rem;
+}
+
+.comment-box form {
+    margin-bottom: -1rem;
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    padding-top: 0.6rem;
+}
+
+.comment-box label {
+    margin: 0.4rem 0;
+}
+
 /* ---------- FORMS ---------- */
 
 form {
