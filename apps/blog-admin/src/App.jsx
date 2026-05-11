@@ -23,8 +23,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path="/post" element={<Post />} />
                     <Route path="/posts" element={<Posts />} />
+                    <Route path="/posts/:postId" element={<Post />} />
                     <Route path="/comments" element={<Comments />} />
                     <Route path="/login" element={<Login />} />
                 </Route>

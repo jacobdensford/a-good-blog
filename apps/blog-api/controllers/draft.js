@@ -23,7 +23,6 @@ async function getDraft(req, res, next) {
         const post = await prisma.post.findUnique({
             where: {
                 id: +req.params.postId,
-                published: false,
             },
         });
         if (!post) {
