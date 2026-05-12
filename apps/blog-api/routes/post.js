@@ -5,6 +5,7 @@ const auth = require("../middleware/auth");
 const validator = require("../middleware/validators");
 const commentRouter = require("./comment");
 const draftRouter = require("./draft");
+const commentController = require("../controllers/comment");
 
 // merge in drafts router
 router.use("/drafts", draftRouter);
@@ -14,6 +15,9 @@ router.use("/:postId/comments", commentRouter);
 
 // get all posts
 router.get("/", controller.getPosts);
+
+// get all comments
+router.get("/comments", commentController.getAllComments);
 
 // get single post by id
 router.get("/:postId", controller.getPost);

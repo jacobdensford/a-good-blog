@@ -79,14 +79,6 @@ export default function Post() {
             const response = await fetch(formUrl + postId, {
                 method: "DELETE",
                 credentials: "include",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    title: title,
-                    content: content,
-                    published: published,
-                }),
             });
             if (!response.ok) {
                 const errorData = await response.json();

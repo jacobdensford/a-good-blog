@@ -1,6 +1,19 @@
 const { prisma } = require("../lib/prisma.js");
 const { validationResult } = require("express-validator");
 
+async function getAllComments(req, res, next) {
+    try {
+        const allComments = await prisma.comment.findMany({
+            orderBy: {
+                createdAt: "asc",
+            },
+        });
+        return res.send(allComments);
+    } catch (err) {
+        return next(err);
+    }
+}
+
 async function getComments(req, res, next) {
     try {
         const comments = await prisma.comment.findMany({
@@ -94,6 +107,7 @@ async function deleteComment(req, res, next) {
 }
 
 module.exports = {
+    getAllComments,
     getComments,
     getComment,
     postComment,

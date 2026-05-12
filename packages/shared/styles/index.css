@@ -302,6 +302,11 @@ form input[type="submit"]:hover {
     cursor: pointer;
 }
 
+.button.comment-delete {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
 /* ---------- IMAGES ---------- */
 img {
     max-width: 100%;
@@ -395,6 +400,17 @@ details.comments p {
 details.comments li .info {
     margin-left: 0;
     margin-right: 0.4em;
+}
+
+.comments-admin,
+.comments-admin p {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.comments-admin .info {
+    margin-left: 0;
 }
 
 details.comments .button {
