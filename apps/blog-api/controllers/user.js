@@ -69,15 +69,28 @@ async function postUser(req, res, next) {
     const { username, password, name, author, admin } = req.body;
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
-        const user = await prisma.user.create({
-            data: {
-                username: username,
-                password: hashedPassword,
-                name: name || null,
-                author: author === authorPass ? true : false,
-                admin: admin === adminPass ? true : false,
-            },
-        });
+        const users = await prisma.user.findMany();
+        if (users.length < 1) {
+            const user = await prisma.user.create({
+                data: {
+                    username: username,
+                    password: hashedPassword,
+                    name: name || null,
+                    author: true,
+                    admin: true,
+                },
+            });
+        } else {
+            const user = await prisma.user.create({
+                data: {
+                    username: username,
+                    password: hashedPassword,
+                    name: name || null,
+                    author: author === authorPass ? true : false,
+                    admin: admin === adminPass ? true : false,
+                },
+            });
+        }
         const { password: _password, ...userWithoutPassword } = user;
         return res.json(userWithoutPassword);
     } catch (err) {
