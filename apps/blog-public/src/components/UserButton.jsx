@@ -33,7 +33,7 @@ export default function UserButton() {
         return <p>⠀</p>;
     }
 
-    if (data?.username && data?.admin) {
+    if (data?.username && data?.author) {
         return <Link to={"/authors/" + data.id}>{data.username}</Link>;
     }
 
