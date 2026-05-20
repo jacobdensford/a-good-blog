@@ -82,11 +82,11 @@ export default function Author() {
         );
     }
 
-    if (!posts) {
+    if (posts.filter((post) => post.authorId == author.id).length < 1) {
         return (
             <article>
                 {!authLoading && data && author.id == data.id ? controls : ""}
-                <h1>author.username</h1>
+                <h1>{author.username}</h1>
                 <AuthorInfo author={author} />
                 <p>This author hasn't made any posts yet.</p>
             </article>
@@ -99,14 +99,16 @@ export default function Author() {
             <h1>{author.username}</h1>
             <AuthorInfo author={author} />
             <ul>
-                {posts.map((post) => (
-                    <li key={post.id}>
-                        <Link to={`/posts/${post.id}`}>{post.title}</Link>
-                        <span className="info">
-                            {new Date(post.createdAt).toLocaleDateString()}
-                        </span>
-                    </li>
-                ))}
+                {posts
+                    .filter((post) => post.authorId == author.id)
+                    .map((post) => (
+                        <li key={post.id}>
+                            <Link to={`/posts/${post.id}`}>{post.title}</Link>
+                            <span className="info">
+                                {new Date(post.createdAt).toLocaleDateString()}
+                            </span>
+                        </li>
+                    ))}
             </ul>
         </article>
     );
