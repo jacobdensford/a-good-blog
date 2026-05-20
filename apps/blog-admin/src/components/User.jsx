@@ -157,13 +157,13 @@ export default function User({ user, users, setUsers }) {
                 </span>
             </p>
             <div>
-                <span className="button" onClick={handlePromote}>
+                <span className="button user-button" onClick={handlePromote}>
                     promote
                 </span>
-                <span className="button" onClick={handleDemote}>
+                <span className="button user-button" onClick={handleDemote}>
                     demote
                 </span>
-                <span className="button" onClick={handleDelete}>
+                <span className="button user-button" onClick={handleDelete}>
                     delete user
                 </span>
             </div>

@@ -302,7 +302,8 @@ form input[type="submit"]:hover {
     cursor: pointer;
 }
 
-.button.comment-delete {
+.button.comment-delete,
+.button.user-button {
     margin: 0;
     margin-bottom: 1rem;
 }
@@ -344,6 +345,16 @@ ol {
 
 li {
     margin: 0.5rem 0;
+}
+
+ul.users-admin {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.users-admin p,
+ul.users-admin div {
+    margin: 0.2rem;
 }
 
 /* ---------- INFO BADGES ---------- */

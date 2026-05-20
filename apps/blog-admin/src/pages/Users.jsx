@@ -84,17 +84,20 @@ export default function Users() {
     return (
         <article>
             <h1>Users</h1>
-            <ul>
-                {users.sort().map((user) => {
-                    return (
-                        <User
-                            key={user.id}
-                            user={user}
-                            users={users}
-                            setUsers={setUsers}
-                        />
-                    );
-                })}
+            <ul className="users-admin">
+                {users
+                    .sort()
+                    .filter((user) => user.id != data.id)
+                    .map((user) => {
+                        return (
+                            <User
+                                key={user.id}
+                                user={user}
+                                users={users}
+                                setUsers={setUsers}
+                            />
+                        );
+                    })}
             </ul>
         </article>
     );
