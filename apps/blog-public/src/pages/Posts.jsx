@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router";
 import { PostsContext, UsersContext } from "../context";
+import { AuthContext } from "@blog/shared";
 
 export default function Posts() {
     const {
@@ -13,6 +14,18 @@ export default function Posts() {
         loading: usersLoading,
         error: usersError,
     } = useContext(UsersContext);
+    const {
+        auth: { loading, data },
+    } = useContext(AuthContext);
+
+    const newPostButton = (
+        <Link
+            to={import.meta.env.VITE_ADMIN_URL + "posts/new"}
+            className="button"
+        >
+            New Post
+        </Link>
+    );
 
     if (postsLoading || usersLoading) {
         return (
@@ -46,6 +59,7 @@ export default function Posts() {
     return (
         <article>
             <h1>Posts</h1>
+            {!loading && data?.author ? newPostButton : ""}
             <ul>
                 {posts.map((post) => (
                     <li key={post.id}>
