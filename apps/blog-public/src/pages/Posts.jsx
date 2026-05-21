@@ -23,7 +23,7 @@ export default function Posts() {
             to={
                 import.meta.env.VITE_ADMIN_URL === ""
                     ? "http://localhost:5174/admin/posts/new"
-                    : `${import.meta.env.VITE_ADMIN_URL}posts/new`
+                    : `${import.meta.env.VITE_ADMIN_URL}/posts/new`
             }
             className="button"
         >
