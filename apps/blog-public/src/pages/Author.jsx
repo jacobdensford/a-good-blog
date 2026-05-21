@@ -26,7 +26,14 @@ export default function Author() {
 
     const controls = (
         <div className="controls">
-            <Link className="button" to={import.meta.env.VITE_ADMIN_URL}>
+            <Link
+                className="button"
+                to={
+                    import.meta.env.VITE_ADMIN_URL === ""
+                        ? "http://localhost:5174/admin/"
+                        : import.meta.env.VITE_ADMIN_URL
+                }
+            >
                 Admin
             </Link>
             <Link className="button" onClick={handleLogout}>

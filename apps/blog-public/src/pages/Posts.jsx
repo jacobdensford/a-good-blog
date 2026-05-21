@@ -20,7 +20,11 @@ export default function Posts() {
 
     const newPostButton = (
         <Link
-            to={import.meta.env.VITE_ADMIN_URL + "posts/new"}
+            to={
+                import.meta.env.VITE_ADMIN_URL === ""
+                    ? "http://localhost:5174/admin/posts/new"
+                    : `${import.meta.env.VITE_ADMIN_URL}posts/new`
+            }
             className="button"
         >
             New Post
