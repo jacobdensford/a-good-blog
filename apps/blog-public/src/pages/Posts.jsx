@@ -19,8 +19,8 @@ export default function Posts() {
     } = useContext(AuthContext);
 
     const newPostButton = (
-        <Link
-            to={
+        <a
+            href={
                 import.meta.env.VITE_ADMIN_URL === ""
                     ? "http://localhost:5174/admin/posts/new"
                     : `${import.meta.env.VITE_ADMIN_URL}/posts/new`
@@ -28,7 +28,7 @@ export default function Posts() {
             className="button"
         >
             New Post
-        </Link>
+        </a>
     );
 
     if (postsLoading || usersLoading) {
