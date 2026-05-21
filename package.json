@@ -10,7 +10,8 @@
     ],
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "conc 'npm run dev --workspace=blog-api' 'npm run dev --workspace=blog-public' 'npm run dev --workspace=blog-admin'"
+        "dev": "conc 'npm run dev --workspace=blog-api' 'npm run dev --workspace=blog-public' 'npm run dev --workspace=blog-admin'",
+        "build": "conc 'npm run build --workspace=blog-admin' 'npm run build --workspace=blog-public'"
     },
     "repository": {
         "type": "git",
