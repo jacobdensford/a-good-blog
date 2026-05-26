@@ -94,6 +94,10 @@ a.button::after {
     padding-left: 0;
 }
 
+a.no-arrow::after {
+    content: "";
+}
+
 /* ---------- HEADER & FOOTER ---------- */
 header {
     padding-bottom: 0.75rem;
@@ -118,10 +122,6 @@ footer a {
     color: inherit;
     border: none;
     transition: color 0.1s ease;
-}
-
-header a.no-arrow::after {
-    content: "";
 }
 
 header a:hover,

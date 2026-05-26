@@ -14,7 +14,13 @@ export default function Home() {
                 <p>Welcome to {siteData.siteName}'s admin site!</p>
                 <p>
                     Would you like to return to {siteData.siteName}? Click{" "}
-                    <a href={import.meta.env.VITE_PUBLIC_URL}>here</a>!
+                    <a
+                        href={import.meta.env.VITE_PUBLIC_URL}
+                        className="no-arrow"
+                    >
+                        here
+                    </a>
+                    !
                 </p>
             </article>
         );
@@ -29,7 +35,10 @@ export default function Home() {
             </p>
             <p>
                 Would you like to return to {siteData.siteName}? Click{" "}
-                <a href={import.meta.env.VITE_PUBLIC_URL}>here</a>!
+                <a href={import.meta.env.VITE_PUBLIC_URL} className="no-arrow">
+                    here
+                </a>
+                !
             </p>
         </article>
     );
