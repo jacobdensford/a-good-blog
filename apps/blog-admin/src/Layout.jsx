@@ -6,7 +6,10 @@ export default function Layout() {
     return (
         <>
             <header>
-                <Link to="/">{siteData.siteName} Admin</Link>
+                <a href={import.meta.env.VITE_PUBLIC_URL} className="no-arrow">
+                    {siteData.siteName}
+                </a>{" "}
+                {">"} <Link to="/">Admin</Link>
             </header>
             <Nav pages={siteData.adminPages} />
             <main>

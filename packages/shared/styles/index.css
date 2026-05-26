@@ -120,6 +120,10 @@ footer a {
     transition: color 0.1s ease;
 }
 
+header a.no-arrow::after {
+    content: "";
+}
+
 header a:hover,
 footer a:hover {
     color: var(--red);

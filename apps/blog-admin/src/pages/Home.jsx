@@ -12,6 +12,10 @@ export default function Home() {
             <article>
                 <h1>{siteData.siteName} Admin</h1>
                 <p>Welcome to {siteData.siteName}'s admin site!</p>
+                <p>
+                    Would you like to return to {siteData.siteName}? Click{" "}
+                    <a href={import.meta.env.VITE_PUBLIC_URL}>here</a>!
+                </p>
             </article>
         );
     }
@@ -22,6 +26,10 @@ export default function Home() {
             <p>
                 Welcome to {siteData.siteName} admin site,{" "}
                 {data?.name || data.username}!
+            </p>
+            <p>
+                Would you like to return to {siteData.siteName}? Click{" "}
+                <a href={import.meta.env.VITE_PUBLIC_URL}>here</a>!
             </p>
         </article>
     );
