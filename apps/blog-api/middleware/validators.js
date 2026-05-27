@@ -1,9 +1,11 @@
 const { body, validationResult } = require("express-validator");
 
-const validateUsername = [body("username").trim().notEmpty().escape()];
+const validateUsername = [
+    body("username").trim().notEmpty().toLowerCase().escape(),
+];
 const validatePassword = [body("password").notEmpty().isStrongPassword()];
 const validateUsernameOptional = [
-    body("username").trim().notEmpty().escape().optional(),
+    body("username").trim().notEmpty().toLowerCase().escape().optional(),
 ];
 const validatePasswordOptional = [
     body("password").notEmpty().isStrongPassword().optional(),
