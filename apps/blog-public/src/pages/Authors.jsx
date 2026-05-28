@@ -25,7 +25,7 @@ export default function Authors() {
         );
     }
 
-    if (!users) {
+    if (users?.length < 1) {
         return (
             <article>
                 <h1>Authors</h1>

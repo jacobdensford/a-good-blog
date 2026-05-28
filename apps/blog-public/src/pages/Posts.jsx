@@ -51,10 +51,11 @@ export default function Posts() {
         );
     }
 
-    if (!posts) {
+    if (posts?.length < 1) {
         return (
             <article>
                 <h1>Posts</h1>
+                {!loading && data?.author ? newPostButton : ""}
                 <p>There are no posts yet.</p>
             </article>
         );
