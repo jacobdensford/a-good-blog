@@ -27,18 +27,19 @@ A blog–including a back-end api, a client view, and an admin view–built as p
     - A ‘NEW POST’ form. If you want to get fancy, you could use a rich text editor such as [TinyMCE](https://www.tiny.cloud/docs/tinymce/6/cloud-quick-start/).
     - The ability to manage comments (i.e. delete or edit them).
 - [x] How much work you want to put into the front-end code on this one is up to you. Technically this is a backend focused course so if you would prefer, feel free to focus on the REST API.
-- [ ] Deploying your separate apps isn’t anything fancy. Deploy your API like with your previous projects using a PaaS from the [Deployment lesson](https://www.theodinproject.com/lessons/node-path-nodejs-deployment), and deploy your front-ends like you would have deployed your front-ends before. If you used React, recall several hosting options from the [CV Application project](https://www.theodinproject.com/lessons/node-path-react-new-cv-application).
+- [x] Deploying your separate apps isn’t anything fancy. Deploy your API like with your previous projects using a PaaS from the [Deployment lesson](https://www.theodinproject.com/lessons/node-path-nodejs-deployment), and deploy your front-ends like you would have deployed your front-ends before. If you used React, recall several hosting options from the [CV Application project](https://www.theodinproject.com/lessons/node-path-react-new-cv-application).
 
 ## Setup
 
-1. ...
-2. ...
-3. ...
-
-- Create `/apps/blog-api/.env` and add the following variables:
-    - `DATABASE_URL`: The url to your database.
-    - `PORT`: The port for your api, typically 3000.
-    - `AUTHOR_PASS`: A password to grant a user author status (currently unused).
-    - `ADMIN_PASS`: A password to grant a user admin status (currently unused).
-    - `CLIENT_URL`: A space separated list of acceptable URLs for clients of the API using regex (typically including "^http:\/\/localhost:\d+$" for development).
-- Change variables in `.env.production` in both `/apps/blog-public` and `/apps/blog-admin` to match your hosted domain.
+1. Clone this repository (`git clone [repo]`) and install (`npm install`)
+2. Ensure you have postgresql installed and configured
+3. Create `/apps/blog-api/.env` and add the following variables:
+    - `DATABASE_URL`: The url to your database
+    - `PORT`: The port for your api, typically 3000
+    - `AUTHOR_PASS`: A password to grant a user author status (currently unused)
+    - `ADMIN_PASS`: A password to grant a user admin status (currently unused)
+    - `CLIENT_URL`: A space separated list of acceptable URLs for clients of the API using regex (typically including "^http:\/\/localhost:\d+$" for development)
+4. From within `/apps/blog-api` run `npx prisma migrate dev --name init` and then `npx prisma generate`
+5. Change variables in `.env.production` in both `/apps/blog-public` and `/apps/blog-admin` to match your hosted domain
+6. Set site name and copyright information in `/packages/shared/data/config.js`
+7. TKTK
