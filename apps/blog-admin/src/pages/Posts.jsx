@@ -64,6 +64,15 @@ export default function Posts() {
         );
     }
 
+    if (!data?.author) {
+        return (
+            <article>
+                <h1>Posts</h1>
+                <p>You must be an author to access this page.</p>
+            </article>
+        );
+    }
+
     if (postsError || error) {
         return (
             <article className="error">

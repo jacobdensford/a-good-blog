@@ -38,24 +38,6 @@ export default function Comments() {
     useEffect(() => {
         async function fetchComments() {
             try {
-                // const allComments = {};
-                // for (let i = 0; i <= posts.length; i++) {
-                //     const response = await fetch(
-                //         import.meta.env.VITE_API_URL +
-                //             "/posts/" +
-                //             posts[i].id +
-                //             "/comments",
-                //     );
-                //     if (!response.ok) {
-                //         throw new Error(`Response status: ${response.status}`);
-                //     }
-                //     const result = await response.json();
-                //     if (result.length > 0) {
-                //         allComments[posts[i].id] = result;
-                //     }
-                // }
-                // setComments(allComments);
-                // setCommentsLoading(false);
                 const response = await fetch(
                     import.meta.env.VITE_API_URL + "/posts/comments",
                 );
@@ -118,6 +100,15 @@ export default function Comments() {
                 <p>
                     You must <Link to="/login">login</Link> first.
                 </p>
+            </article>
+        );
+    }
+
+    if (!data?.author) {
+        return (
+            <article>
+                <h1>Comments</h1>
+                <p>You must be an author to access this page.</p>
             </article>
         );
     }
