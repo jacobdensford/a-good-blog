@@ -12,6 +12,7 @@ export function Login() {
     } = useContext(AuthContext);
     const navigate = useNavigate();
     const formUrl = import.meta.env.VITE_API_URL + "/auth/login";
+    const signupLink = import.meta.env.VITE_PUBLIC_URL ? <a href={import.meta.env.VITE_PUBLIC_URL + "/signup"}>Sign up for one!</a> : <Link to={"/signup"}>Sign up for one!</Link>;
 
     function handleUsernameChange(e) {
         setUsername(e.target.value);
@@ -100,7 +101,7 @@ export function Login() {
             </form>
             <p>
                 Don't have an account?{" "}
-                <Link to={"/signup"}>Sign up for one!</Link>
+                {signupLink}
             </p>
         </article>
     );
