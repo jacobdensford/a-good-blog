@@ -2,29 +2,39 @@
 
 # A Good Blog
 
-BADGES
+<!-- BADGES -->
 
-<!-- What it does, why it does it that way, what problem it solves and how. -->
+<!-- What it does, why it does it that way, what problem it solves and how; written in about three sentences. (Can potentially use this for my three bullet points in my resume, etc.) -->
 
-*Subtitle or slogan or something.*
+<!-- *Subtitle or slogan or something.* This will be the same thing that I put for the description -->
 
-A Good Blog is a multi-author blogging platform for small communities–including a back-end api, a client view, and an admin view. It uses [Express](https://expressjs.com/), [Prisma](), [Passport](), TKTK.
+A Good Blog is a multi-author blogging platform for small communities; including a back-end api, a client view, and an admin view; and using [PostgreSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), [React](https://react.dev/), and [Node.js](https://nodejs.org/en).
+
+<!-- It uses , [Prisma](), [Passport](), TKTK. -->
+
+<!-- ## Details
+
+Architecture, implementation details, and features.
 
 - TKTK
 - TKTK
-- TKTK
-
-## Details
-
-<!-- Architecture, implementation details, and features. -->
+- TKTK -->
 
 ## Example
 
 <!-- Screenshot(s) and links to live demo version. -->
 
+<!-- ![Screenshot of A Good Blog homepage](screenshot.jpg) -->
+
+Visit [blog.densford.net](http://blog.densford.net) to see A Good Blog in action.
+
 ## Usage
 
 <!-- Use instructions for the end-user (readers, commenters, authors). -->
+
+- Find your way around A Good Blog by using the navigation bar, which is visible at the top of every page.
+- You start the homepage, where you can see details about the blog you're visiting, as well as the latest few posts. Return there at any time by clicking `Home` in the navigation menu at the top of any page.
+<!-- - TKTK -->
 
 ## Setup
 
@@ -39,9 +49,9 @@ A Good Blog is a multi-author blogging platform for small communities–includin
 4. From within `/apps/blog-api` run `npx prisma migrate dev --name init` and then `npx prisma generate`
 5. Change variables in `.env.production` in both `/apps/blog-public` and `/apps/blog-admin` to match your hosted domain
 6. Set site name and copyright information in `/packages/shared/data/config.js`
-7. TKTK
+<!-- 7. TKTK -->
 
-## Roadmap
+<!-- ## Roadmap -->
 
 ## Contribution
 
@@ -55,8 +65,8 @@ If you would like to contribute to this project, please fork and make a pull req
 
 [hello@jacobdensford.com](mailto:hello@jacobdensford.com)
 
-## Acknowledgements
+<!-- ## Acknowledgements
 
-<!-- List plugins and tools used (that aren't included in the actual stack laid out above) and people who have helped. -->
+List plugins and tools used (that aren't included in the actual stack laid out above) and people who have helped.
 
-- TKTK
+- TKTK -->
