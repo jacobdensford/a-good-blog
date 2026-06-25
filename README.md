@@ -48,7 +48,7 @@ Visit [blog.densford.net](http://blog.densford.net) to see A Good Blog in action
     - `CLIENT_URL`: A space separated list of acceptable URLs for clients of the API using regex (typically including "^http:\/\/localhost:\d+$" for development)
 4. From within `/apps/blog-api` run `npx prisma migrate dev --name init` and then `npx prisma generate`
 5. Change variables in `.env.production` in both `/apps/blog-public` and `/apps/blog-admin` to match your hosted domain
-6. Set site name and copyright information in `/packages/shared/data/config.js`
+6. Set site name, about, and copyright information in `/packages/shared/data/config.js`
 <!-- 7. TKTK -->
 
 ## Roadmap

@@ -15,4 +15,5 @@ export const siteData = {
         { title: "comments", link: "/comments" },
         { title: "users", link: "/users" },
     ],
+    about: "This blog is an example of [A Good Blog](https://github.com/jacobdensford/a-good-blog)—an IndieWeb-inspired full-stack blogging platform."
 };

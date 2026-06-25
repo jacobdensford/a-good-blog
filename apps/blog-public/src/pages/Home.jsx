@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext, siteData } from "@blog/shared";
+import Markdown from "react-markdown";
 
 export default function Home() {
     const {
@@ -8,10 +9,13 @@ export default function Home() {
 
     if (loading || !data || !data?.name || !data?.username) {
         return (
-            <article>
+            <>
                 <h1>{siteData.siteName}</h1>
                 <p>Welcome to {siteData.siteName}!</p>
-            </article>
+                <div id="about">
+                    <Markdown>{siteData.about}</Markdown>
+                </div>
+            </>
         );
     }
 
@@ -21,6 +25,9 @@ export default function Home() {
             <p>
                 Welcome to {siteData.siteName}, {data?.name || data.username}!
             </p>
+            <div id="about">
+                <Markdown>{siteData.about}</Markdown>
+            </div>
         </article>
     );
 }
