@@ -9,13 +9,13 @@ export default function Home() {
 
     if (loading || !data || !data?.name || !data?.username) {
         return (
-            <>
+            <article>
                 <h1>{siteData.siteName}</h1>
                 <p>Welcome to {siteData.siteName}!</p>
                 <div id="about">
                     <Markdown>{siteData.about}</Markdown>
                 </div>
-            </>
+            </article>
         );
     }
 
