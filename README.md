@@ -8,13 +8,13 @@
 
 <!-- *Subtitle or slogan or something.* This will be the same thing that I put for the description -->
 
-A Good Blog is a multi-author blogging platform for small communities; including a back-end api, a client view, and an admin view; and using [PostgreSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), [React](https://react.dev/), and [Node.js](https://nodejs.org/en).
-
-<!-- It uses , [Prisma](), [Passport](), TKTK. -->
+A Good Blog is an [IndieWeb](https://indieweb.org/)-inspired full-stack blogging platform that enables personal content ownership for individual bloggers, small communities, and independent publications. It includes two separate frontends—one for reading, another for admin—and a RESTful API backend, built using [PostgreSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), [React](https://react.dev/), and [Node.js](https://nodejs.org/en).
 
 <!-- ## Details
 
 Architecture, implementation details, and features.
+
+It uses , [Prisma](), [Passport](), TKTK.
 
 - TKTK
 - TKTK
@@ -51,7 +51,9 @@ Visit [blog.densford.net](http://blog.densford.net) to see A Good Blog in action
 6. Set site name and copyright information in `/packages/shared/data/config.js`
 <!-- 7. TKTK -->
 
-<!-- ## Roadmap -->
+## Roadmap
+
+- Consider switching from ngnix to [Caddy](https://caddyserver.com/)
 
 ## Contribution
 
