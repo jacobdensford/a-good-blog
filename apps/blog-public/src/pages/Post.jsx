@@ -60,14 +60,14 @@ export default function Posts() {
 
     return (
         <>
-            <article>
-                <h1>{post.title}</h1>
+            <article className="h-entry">
+                <h1 className="p-name">{post.title}</h1>
                 <span className="info">
                     By{" "}
-                    <Link to={"/authors/" + author.id}>{author.username}</Link>{" "}
-                    on {new Date(post.createdAt).toLocaleDateString()}
+                    <Link to={"/authors/" + author.id} className="p-author h-card" rel="author">{author.username}</Link>{" "}
+                    on <Link to ={"/posts/" + post.id} className="dt-published u-url">{new Date(post.createdAt).toLocaleDateString()}</Link>
                 </span>
-                <div>
+                <div className="e-content">
                     <Markdown>{post.content}</Markdown>
                 </div>
             </article>
