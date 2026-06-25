@@ -6,7 +6,7 @@ export default function Comment({ comment, posts, handleDeleteComment }) {
         <li>
             <span className="info">
                 Comment on{" "}
-                <Link to={`/posts/${comment.postId}`}>
+                <Link className="no-arrow" to={`${import.meta.env.VITE_PUBLIC_URL}/posts/${comment.postId}`}>
                     {posts.find((post) => post.id == comment.postId).title}
                 </Link>{" "}
                 from {new Date(comment.createdAt).toLocaleDateString()}

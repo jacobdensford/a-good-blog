@@ -96,6 +96,7 @@ a.button::after {
 
 a.no-arrow::after {
     content: "";
+    padding-left: 0;
 }
 
 /* ---------- HEADER & FOOTER ---------- */
