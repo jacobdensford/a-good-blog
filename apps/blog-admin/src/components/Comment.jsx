@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import Markdown from "react-markdown";
 
 export default function Comment({ comment, posts, handleDeleteComment }) {
     return (
@@ -10,7 +11,7 @@ export default function Comment({ comment, posts, handleDeleteComment }) {
                 </Link>{" "}
                 from {new Date(comment.createdAt).toLocaleDateString()}
             </span>
-            <p>{comment.content}</p>
+            <Markdown>{comment.content}</Markdown>
             <div
                 className="button comment-delete"
                 onClick={() => handleDeleteComment(comment)}
