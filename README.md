@@ -26,7 +26,7 @@ It uses , [Prisma](), [Passport](), TKTK.
 
 <!-- ![Screenshot of A Good Blog homepage](screenshot.jpg) -->
 
-Visit [blog.densford.net](http://blog.densford.net) to see A Good Blog in action.
+Visit [blog.densford.net](https://blog.densford.net) to see A Good Blog in action.
 
 ## Usage
 
