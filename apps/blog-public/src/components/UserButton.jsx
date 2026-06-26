@@ -30,7 +30,7 @@ export default function UserButton() {
     }
 
     if (loading) {
-        return <p>⠀</p>;
+        return <p></p>;
     }
 
     if (data?.username && data?.author) {

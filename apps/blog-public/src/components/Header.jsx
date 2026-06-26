@@ -31,7 +31,7 @@ export default function Header({ siteName }) {
         return (
             <header>
                 <Link to="/">{siteName}</Link>
-                <span className="breadcrumbs loading"> {">"} ⠀</span>
+                <span className="breadcrumbs loading"></span>
             </header>
         );
     }
