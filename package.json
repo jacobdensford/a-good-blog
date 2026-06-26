@@ -9,7 +9,7 @@
         "packages/shared"
     ],
     "scripts": {
-        "test": "conc 'npm run test --workspace=blog-api'",
+        "test": "npm run test --workspace=blog-api",
         "dev": "conc 'npm run dev --workspace=blog-api' 'npm run dev --workspace=blog-public' 'npm run dev --workspace=blog-admin'",
         "build": "conc 'npm run build --workspace=blog-admin' 'npm run build --workspace=blog-public'"
     },
